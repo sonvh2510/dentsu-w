@@ -1,9 +1,13 @@
 {
-	"css": ["node_modules/perfect-scrollbar/css/perfect-scrollbar.css"],
+	"css": [
+		"node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
+		"node_modules/swiper/swiper-bundle.css"
+	],
 	"js": [
 		"node_modules/jquery/dist/jquery.js",
 		"node_modules/perfect-scrollbar/dist/perfect-scrollbar.js",
-		"node_modules/lazysizes/lazysizes.js"
+		"node_modules/lazysizes/lazysizes.js",
+		"node_modules/swiper/swiper-bundle.js"
 	],
 	"fonts": []
 }

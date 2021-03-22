@@ -1,9 +1,9 @@
-@mixin img($ratio) {
-	padding-top: $ratio * 100%;
+@mixin img($ratio, $type) {
+	padding-top: (1 / $ratio) * 100%;
 	display: block;
 	position: relative;
 	img {
-		object-fit: cover;
+		object-fit: $type;
 		width: 100%;
 		height: 100%;
 		position: absolute;

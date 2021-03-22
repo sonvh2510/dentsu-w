@@ -1,4 +1,5 @@
 import PerfectScrollbar from 'perfect-scrollbar';
+// import Swiper from 'swiper';
 
 // Define variables
 const body = document.body;
@@ -43,8 +44,30 @@ const headerSiteMenuScrollbar = () => {
 	});
 };
 
+const highlightProjectsSlider = () => {
+	return new Swiper('.highlight-projects-bottom .swiper-container', {
+		slidesPerView: 3,
+		loop: true,
+		centeredSlides: true,
+		effect: 'coverflow',
+		spaceBetween: 40,
+		coverflowEffect: {
+			rotate: 50,
+			stretch: 0,
+			depth: 100,
+			modifier: 1,
+			slideShadows: true,
+		},
+		pagination: {
+			el: '.highlight-projects-bottom .swiper-pagination',
+			clickable: true,
+		},
+	});
+};
 
 document.addEventListener('DOMContentLoaded', () => {
 	headerSiteMenuScrollbar();
 	toggleHeader();
+
+	highlightProjectsSlider();
 });
