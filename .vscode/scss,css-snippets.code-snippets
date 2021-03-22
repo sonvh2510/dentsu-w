@@ -27,8 +27,7 @@
 		"scope": "css,less,scss",
 		"prefix": "varg",
 		"body": [
-			"map-get(\\$color, $1);",
-			"$0"
+			"map-get(\\$color, $1)$0",
 		]
 	},
 	"media-up": {
