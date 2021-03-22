@@ -1,19 +1,19 @@
 @font-face {
-    font-family: 'Drotesk No5';
-    src: local('Drotesk No5 Medium'), local('DroteskNo5-Medium'),
-        url('../fonts/DroteskNo5-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'Drotesk No5';
+	src: local('Drotesk No5 Medium'), local('DroteskNo5-Medium'),
+		url('../fonts/DroteskNo5-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Drotesk No5';
-    src: local('Drotesk No5 Regular'), local('DroteskNo5-Regular'),
-        url('../fonts/DroteskNo5-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'Drotesk No5';
+	src: local('Drotesk No5 Regular'), local('DroteskNo5-Regular'),
+		url('../fonts/DroteskNo5-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -179,4 +179,7 @@
 }
 .fa-pig:before {
 	content: '\f706';
+}
+.fa-comment-alt-edit:before {
+	content: '\f4a4';
 }
