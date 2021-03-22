@@ -1,0 +1,25 @@
+block var
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel='preconnect' href='https://fonts.gstatic.com')
+		link(rel="preconnect" href="./css/core.min.css")
+		link(rel="preconnect" href="./css/main.min.css")
+		link(rel="preconnect" href="./js/core.min.js")
+		link(rel="preconnect" href="./js/main.min.js")
+	block css
+		include css
+	title=pageTitle
+	body 
+		block header
+			include header
+		main
+			block main
+		block footer
+			include footer
+		block js
+			include js
