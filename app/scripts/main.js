@@ -65,9 +65,53 @@ const highlightProjectsSlider = () => {
 	});
 };
 
+const projectMasonry = () => {
+	const $grid = $('.js-masonry').masonry({
+		// options
+		columnWidth: '.grid-sizer',
+		itemSelector: '.grid-item',
+		percentPosition: true,
+		initLayout: false,
+		gutter: 20,
+	});
+	$grid.imagesLoaded().progress(function () {
+		$grid.masonry('layout');
+	});
+
+	const filterWrapper = $('.filter-wrapper');
+	const filterContent = $('.filter-content');
+	const filterItemLinks = filterWrapper.find('.filter-item .filter-link');
+	filterItemLinks.each(function (index) {
+		const _this = $(this);
+		_this.on('click', function (e) {
+			e.preventDefault();
+			$grid.masonry('layout')
+			// const url = _this.attr('href');
+			// $.ajax({
+			// 	url,
+			// 	success: function (res) {
+			// 		$('.js-masonry').html($(res).html());
+			// 		const $grid = $('.js-masonry').masonry({
+			// 			// options
+			// 			columnWidth: '.grid-sizer',
+			// 			itemSelector: '.grid-item',
+			// 			percentPosition: true,
+			// 			initLayout: false,
+			// 			gutter: 20,
+			// 		});
+			// 		$grid.imagesLoaded().progress(function () {
+			// 			$grid.masonry('layout');
+			// 		});
+			// 	},
+			// });
+		});
+	});
+};
+
 document.addEventListener('DOMContentLoaded', () => {
 	headerSiteMenuScrollbar();
 	toggleHeader();
 
 	highlightProjectsSlider();
+	projectMasonry();
 });
