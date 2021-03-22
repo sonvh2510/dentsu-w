@@ -46,8 +46,9 @@
 }
 .index-5 {
 	background-color: map-get($color, white);
+	min-height: auto;
 	.block-img {
-		margin-top: 20px;
+		margin-bottom: 20px;
 		-ms-flex: 0 0 (100% / 6);
 		flex: 0 0 (100% / 6);
 		max-width: (100% / 6);
