@@ -20,7 +20,7 @@
 		"scope": "jade, pug",
 		"prefix": "imgl",
 		"body": [
-			"img.lazyload(data-src=\"$1\")$0"
+			"img.lazyload.blur-up(data-src=\"$1\")$0"
 		]
 	},
 }
