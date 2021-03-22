@@ -1,4 +1,3 @@
-
 .our-works-2 {
 	background-color: map-get($color, white);
 	min-height: auto;
@@ -24,6 +23,30 @@
 			-ms-flex: 0 0 (100% / 4);
 			flex: 0 0 (100% / 4);
 			max-width: (100% / 4);
+		}
+		@media (max-width: 767.98px) {
+			-ms-flex: 0 0 (100% / 3);
+			flex: 0 0 (100% / 3);
+			max-width: (100% / 3);
+		}
+		@media (max-width: 575.98px) {
+			-ms-flex: 0 0 (100% / 2);
+			flex: 0 0 (100% / 2);
+			max-width: (100% / 2);
+		}
+	}
+	.tab__label {
+		margin-bottom: 20px;
+		p {
+			padding: 1rem 2rem;
+			color: map-get($color, white);
+			text-transform: uppercase;
+			background-color: map-get($color, main);
+		}
+	}
+	.row {
+		+ .row {
+			margin-top: 40px;
 		}
 	}
 }

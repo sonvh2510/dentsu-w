@@ -36,6 +36,12 @@ header {
 		span.fal {
 			margin-left: 10px;
 		}
+		@media (max-width: 767.98px) {
+			font-size: 14px;
+			span.fal {
+				display: none;
+			}
+		}
 	}
 }
 .header__toggle {
@@ -73,6 +79,9 @@ header {
 				width: 14px;
 			}
 		}
+	}
+	@media (max-width: 767.98px) {
+		margin-left: 10px;
 	}
 }
 .header__siteMenu--hidden {

@@ -3,7 +3,7 @@ export default class Tab {
 		this.selector = document.querySelector(selector);
 		if (this.selector != undefined) {
 			this.navigationItems = Array.from(
-				this.selector.querySelectorAll('[toggle-for]'),
+				this.selector.querySelectorAll('[tab-label]'),
 			);
 			this.contentList = Array.from(
 				this.selector.querySelectorAll('[tab-id]'),
@@ -16,7 +16,7 @@ export default class Tab {
 		this.navigationItems.forEach((element, index) => {
 			element.addEventListener('click', (e) => {
 				e.preventDefault();
-				const tabTarget = element.attributes['toggle-for'].value;
+				const tabTarget = element.attributes['tab-label'].value;
 				const targetDOM = Array.from(
 					this.selector.querySelectorAll(`[tab-id='${tabTarget}']`),
 				);

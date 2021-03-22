@@ -42,6 +42,8 @@ const headerSiteMenuScrollbar = () => {
 		swipeEasing: true,
 	});
 };
+
+
 document.addEventListener('DOMContentLoaded', () => {
 	headerSiteMenuScrollbar();
 	toggleHeader();

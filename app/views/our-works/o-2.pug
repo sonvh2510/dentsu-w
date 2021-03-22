@@ -1,11 +1,27 @@
 section.page-section.pd-70.our-works-2
 	.container
-		.row.jc-c.h-100
+		h2.section-title.tt-u.underline.underline-black Our Clients
+		.row.jc-c
 			.col-md-3
-				h2.section-title.tt-u Our Clients
-			.col-md
-				.row
-					-for(let i = 1; i<23; i++)
-						.block-img
-							a(href="#")
-								img.lazyload.blur-up(data-src="./images/clients/client-"+i+".svg")
+				.tab__label
+					p Brand
+			.col-md-1
+			.col-md-8
+				.tab__content
+					.row
+						-for(let i = 1; i<21; i++)
+							.block-img
+								a(href="#")
+									img.lazyload.blur-up(data-src="./images/clients/client-"+i+".svg")
+		.row.jc-c
+			.col-md-3
+				.tab__label
+					p Agency
+			.col-md-1
+			.col-md-8
+				.tab__content
+					.row
+						-for(let i = 21; i<23; i++)
+							.block-img
+								a(href="#")
+									img.lazyload.blur-up(data-src="./images/clients/client-"+i+".svg")
