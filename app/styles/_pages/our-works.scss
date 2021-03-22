@@ -1,0 +1,29 @@
+
+.our-works-2 {
+	background-color: map-get($color, white);
+	min-height: auto;
+	.block-img {
+		margin-bottom: 20px;
+		-ms-flex: 0 0 (100% / 6);
+		flex: 0 0 (100% / 6);
+		max-width: (100% / 6);
+		padding: 0 10px;
+		a {
+			box-shadow: 0 0 8px rgba(black, 0.1);
+			display: block;
+			padding: 15px;
+			height: 100%;
+			background-color: map-get($color, white);
+		}
+		@media (max-width: 1439.98px) {
+			-ms-flex: 0 0 (100% / 5);
+			flex: 0 0 (100% / 5);
+			max-width: (100% / 5);
+		}
+		@media (max-width: 1199.98px) {
+			-ms-flex: 0 0 (100% / 4);
+			flex: 0 0 (100% / 4);
+			max-width: (100% / 4);
+		}
+	}
+}
