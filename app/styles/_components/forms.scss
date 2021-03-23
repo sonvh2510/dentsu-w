@@ -1,0 +1,35 @@
+.form-group {
+	display: block;
+	width: 100%;
+	margin-bottom: 15px;
+}
+.form-control {
+	width: 100%;
+	display: block;
+	border: 1px solid map-get($color, white);
+	border-radius: 5px;
+	padding: 10px 15px;
+	box-shadow: 0 0 10px rgba(map-get($color, black), 0.2);
+	transition: all .4s cubic-bezier(0.19, 1, 0.22, 1);
+	font-size: 16px;
+	&:active,
+	&:focus {
+		outline: none;
+		box-shadow: 5px 5px 10px rgba(map-get($color, black), 0.3);
+	}
+}
+.form-group__label {
+	display: block;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.form-group__message {
+	color: red;
+	margin-top: 5px;
+	text-align: right;
+	font-weight: 500;
+	span.far {
+		margin-right: 5px;
+	}
+}

@@ -46,11 +46,11 @@ const headerSiteMenuScrollbar = () => {
 
 const highlightProjectsSlider = () => {
 	return new Swiper('.highlight-projects-bottom .swiper-container', {
-		slidesPerView: 3,
+		slidesPerView: 2,
 		loop: true,
 		centeredSlides: true,
 		effect: 'coverflow',
-		spaceBetween: 40,
+		spaceBetween: 10,
 		coverflowEffect: {
 			rotate: 50,
 			stretch: 0,
@@ -62,20 +62,32 @@ const highlightProjectsSlider = () => {
 			el: '.highlight-projects-bottom .swiper-pagination',
 			clickable: true,
 		},
+		breakpoints: {
+			768: {
+				spaceBetween: 25,
+			},
+			1025: {
+				slidesPerView: 3,
+			},
+			1200: {
+				spaceBetween: 40,
+				slidesPerView: 3,
+			},
+		},
 	});
 };
 
 const projectMasonry = () => {
-	var galleryGrid = $(".js-mansonry")
-  galleryGrid.imagesLoaded(function () {
-    galleryGrid.isotope({
-      itemSelector: ".grid-item",
-      percentPosition: true,
-    });
-  })
-  galleryGrid.imagesLoaded().progress(function () {
-    galleryGrid.isotope();
-  });
+	var galleryGrid = $('.js-mansonry');
+	galleryGrid.imagesLoaded(function () {
+		galleryGrid.isotope({
+			itemSelector: '.grid-item',
+			percentPosition: true,
+		});
+	});
+	galleryGrid.imagesLoaded().progress(function () {
+		galleryGrid.isotope();
+	});
 
 	const filterWrapper = $('.filter-wrapper');
 	const filterItemLinks = filterWrapper.find('.filter-item .filter-link');
@@ -92,12 +104,12 @@ const projectMasonry = () => {
 			$.ajax({
 				url,
 				success: function (res) {
-					const $oldItems = galleryGrid.find(".grid-item")
-					const $items = $(res).find('.grid-item')
-					galleryGrid.isotope('remove', $oldItems)
-					galleryGrid.append($items).isotope('appended', $items)
+					const $oldItems = galleryGrid.find('.grid-item');
+					const $items = $(res).find('.grid-item');
+					galleryGrid.isotope('remove', $oldItems);
+					galleryGrid.append($items).isotope('appended', $items);
 					galleryGrid.imagesLoaded().progress(function () {
-						galleryGrid.isotope()
+						galleryGrid.isotope();
 					});
 				},
 			});

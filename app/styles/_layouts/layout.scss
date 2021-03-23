@@ -57,13 +57,9 @@ main {
 }
 
 .page-section {
-	min-height: calc(100vh - 80px);
 	display: flex;
-	@media (max-width: 1199.98px) {
-		min-height: calc(100vh - 70px);
-	}
-	@media (max-width: 767.98px) {
-		min-height: calc(100vh - 60px);
+	@media (min-width: 1025px) {
+		min-height: calc(100vh - 80px);
 	}
 }
 
@@ -111,5 +107,11 @@ main {
 		&:before {
 			background-color: map-get($color, black);
 		}
+	}
+	@media (max-width: 1199.98px) {
+		font-size: 3rem;
+	}
+	@media (max-width: 767.98px) {
+		font-size: 2.8rem;
 	}
 }

@@ -1,0 +1,19 @@
+footer {
+	background-color: map-get($color, main);
+	.footer-title {
+		margin-bottom: 15px;
+		font-size: 2.6rem;
+		text-transform: uppercase;
+	}
+}
+.footer-address {
+	p {
+		margin-bottom: 15px;
+	}
+}
+.footer-logo {
+	margin-top: 40px;
+	img {
+		max-width: 450px;
+	}
+}
