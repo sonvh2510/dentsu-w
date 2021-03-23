@@ -1,7 +1,9 @@
 {
 	"css": [
 		"node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
-		"node_modules/swiper/swiper-bundle.css"
+		"node_modules/swiper/swiper-bundle.css",
+		"node_modules/wow.js/css/libs/animate.css",
+		"node_modules/wow.js/css/site.css"
 	],
 	"js": [
 		"node_modules/jquery/dist/jquery.js",
@@ -9,7 +11,8 @@
 		"node_modules/lazysizes/lazysizes.js",
 		"node_modules/swiper/swiper-bundle.js",
 		"node_modules/imagesloaded/imagesloaded.pkgd.js",
-		"node_modules/isotope-layout/dist/isotope.pkgd.js"
+		"node_modules/isotope-layout/dist/isotope.pkgd.js",
+		"node_modules/wow.js/dist/wow.js"
 	],
 	"fonts": []
 }
