@@ -74,7 +74,7 @@ const projectMasonry = () => {
     });
   })
   galleryGrid.imagesLoaded().progress(function () {
-    galleryGrid.isotope('layout');
+    galleryGrid.isotope();
   });
 
 	const filterWrapper = $('.filter-wrapper');
