@@ -76,7 +76,7 @@
 .index-3 {
 	@extend .index-2;
 	background-color: map-get($color, white);
-	background-image: url('/images/shape-line-a.png');
+	background-image: url('/images/index-1-bg-3.png');
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: 100%;
@@ -107,9 +107,13 @@
 
 .index-4 {
 	background-color: map-get($color, main);
+	background-image: url('/images/index-1-bg-2.jpg');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 100%;
 	min-height: auto;
 	.section-title {
-		color: map-get($color, black);
+		color: map-get($color, white);
 		margin-bottom: 50px;
 	}
 	.block-item {
@@ -182,6 +186,10 @@
 }
 
 .index-5 {
+	background-image: url('/images/index-1-bg-4.png');
+	background-repeat: no-repeat;
+	background-position: 0 100%;
+	background-size: 100%;
 	.block-text {
 		margin-top: 4.5rem;
 		p {
