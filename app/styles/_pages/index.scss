@@ -28,7 +28,7 @@
 			}
 		}
 	}
-	.block-img{
+	.block-img {
 		@media (max-width: 1024.98px) {
 			padding: 30px;
 		}
@@ -80,6 +80,9 @@
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: 100%;
+	@media (max-width: 1199.98px) {
+		background-size: 120%;
+	}
 	@media (max-width: 1024.98px) {
 		.block-img {
 			padding: 30px;
@@ -96,6 +99,9 @@
 		.col-lg-5 {
 			order: 3;
 		}
+	}
+	@media (max-width: 767.98px) {
+		background-size: 150%;
 	}
 }
 
