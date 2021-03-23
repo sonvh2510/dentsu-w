@@ -5,11 +5,23 @@
 	padding: 0.8rem 1.5rem;
 	cursor: pointer;
 	transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+	border: 0;
 }
 
 .btn__primary {
 	background-color: map-get($color, main);
 	color: map-get($color, white);
+	&:hover {
+		color: map-get($color, main);
+		background-color: map-get($color, black);
+	}
+}
+.btn__white {
+	background-color: map-get($color, white);
+	padding: 10px 35px;
+	font-weight: 700;
+	text-transform: uppercase;
+	border-radius: 5px;
 	&:hover {
 		color: map-get($color, main);
 		background-color: map-get($color, black);
