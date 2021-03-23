@@ -117,9 +117,19 @@ const projectMasonry = () => {
 	});
 };
 
+const scrollToForm = () => {
+	$('.header__contact a').on('click', function (e) {
+		e.preventDefault();
+		const pos = $('#footer-form').offset().top - header.clientHeight;
+		$('html,body').animate({ scrollTop: pos }, 1200, 'swing');
+	});
+};
+
 document.addEventListener('DOMContentLoaded', () => {
 	headerSiteMenuScrollbar();
 	toggleHeader();
+
+	scrollToForm();
 
 	highlightProjectsSlider();
 	projectMasonry();
