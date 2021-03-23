@@ -8,8 +8,8 @@
 		"node_modules/perfect-scrollbar/dist/perfect-scrollbar.js",
 		"node_modules/lazysizes/lazysizes.js",
 		"node_modules/swiper/swiper-bundle.js",
-		"node_modules/masonry-layout/dist/masonry.pkgd.js",
-		"node_modules/imagesloaded/imagesloaded.pkgd.js"
+		"node_modules/imagesloaded/imagesloaded.pkgd.js",
+		"node_modules/isotope-layout/dist/isotope.pkgd.js"
 	],
 	"fonts": []
 }

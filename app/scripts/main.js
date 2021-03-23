@@ -66,40 +66,38 @@ const highlightProjectsSlider = () => {
 };
 
 const projectMasonry = () => {
-	const $grid = $('.js-masonry').masonry({
-		// options
-		columnWidth: '.grid-sizer',
-		itemSelector: '.grid-item',
-		percentPosition: true,
-		initLayout: false,
-		gutter: 20,
-	});
-	$grid.imagesLoaded().progress(function () {
-		$grid.masonry('layout');
-	});
+	var galleryGrid = $(".js-mansonry")
+  galleryGrid.imagesLoaded(function () {
+    galleryGrid.isotope({
+      itemSelector: ".grid-item",
+      percentPosition: true,
+    });
+  })
+  galleryGrid.imagesLoaded().progress(function () {
+    galleryGrid.isotope('layout');
+  });
 
 	const filterWrapper = $('.filter-wrapper');
-	const filterContent = $('.filter-content');
 	const filterItemLinks = filterWrapper.find('.filter-item .filter-link');
 	filterItemLinks.each(function (index) {
 		const _this = $(this);
 		_this.on('click', function (e) {
 			e.preventDefault();
+			_this.addClass('active');
+			filterWrapper
+				.find('.filter-item .filter-link')
+				.not(_this)
+				.removeClass('active');
 			const url = _this.attr('href');
 			$.ajax({
 				url,
 				success: function (res) {
-					$('.js-masonry').html($(res).html());
-					const $grid = $('.js-masonry').masonry({
-						// options
-						columnWidth: '.grid-sizer',
-						itemSelector: '.grid-item',
-						percentPosition: true,
-						initLayout: false,
-						gutter: 20,
-					});
-					$grid.imagesLoaded().progress(function () {
-						$grid.masonry('layout');
+					const $oldItems = galleryGrid.find(".grid-item")
+					const $items = $(res).find('.grid-item')
+					galleryGrid.isotope('remove', $oldItems)
+					galleryGrid.append($items).isotope('appended', $items)
+					galleryGrid.imagesLoaded().progress(function () {
+						galleryGrid.isotope()
 					});
 				},
 			});
