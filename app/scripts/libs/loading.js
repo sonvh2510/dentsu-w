@@ -4,16 +4,16 @@ export const Loading = () => {
 	let imagesLength = images.length;
 	let counter = 0;
 
-	function turnOffLoadingScreen() {
+	const turnOffLoadingScreen = () => {
 		loading.style.opacity = '0';
-		setTimeout(function () {
+		setTimeout(() => {
 			loading.parentNode.removeChild(loading);
 			document.querySelector('body').classList.add('show-page');
 			resolve();
 		}, 500);
-	}
+	};
 
-	function progressing() {
+	const progressing = () => {
 		counter += 1;
 		let progressBar = loading.querySelector('#progress-bar');
 		let progressPercentage = loading.querySelector('#progress-percentage');
@@ -28,7 +28,7 @@ export const Loading = () => {
 		if (counter === imagesLength) {
 			return turnOffLoadingScreen();
 		}
-	}
+	};
 
 	if (loading != undefined) {
 		return new Promise((resolve, reject) => {

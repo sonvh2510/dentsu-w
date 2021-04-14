@@ -44,11 +44,27 @@
 		padding-bottom: 40px;
 	}
 }
+.mobile {
+	@media (min-width: 1025px) {
+		display: none !important;
+	}
+}
+.desktop {
+	@media (max-width: 1024.98px) {
+		display: none !important;
+	}
+}
 .ov-h {
 	overflow: hidden;
 }
 .jc-c {
 	justify-content: center;
+}
+.jc-sb {
+	justify-content: space-between;
+}
+.jc-fe {
+	justify-content: flex-end;
 }
 .ai-c {
 	align-items: center;

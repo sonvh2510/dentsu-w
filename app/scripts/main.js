@@ -1,5 +1,6 @@
 import PerfectScrollbar from 'perfect-scrollbar';
-// import Swiper from 'swiper';
+import MoveElement from './libs/move';
+import { Parallax } from './libs/parallax';
 
 // Define variables
 const body = document.body;
@@ -126,6 +127,24 @@ const scrollToForm = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+	new MoveElement('.header__nav', {
+		mobile: {
+			node: '.header__siteMenu__wrapper',
+			method: 'prependTo',
+		},
+		desktop: {
+			node: '.header__logo',
+			method: 'insertAfter',
+		},
+	});
+	// Parallax
+	const p = new Parallax('.parallax', {
+		target: '.parllax__img',
+		ratio: 3,
+		mobile: false,
+		breakpoint: 1025,
+	});
+
 	headerSiteMenuScrollbar();
 	toggleHeader();
 

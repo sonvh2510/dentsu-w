@@ -1,42 +1,34 @@
 footer.pd-70
-	.container 
+	.container
 		.row.jc-c
-			.col-lg-5 
-				.footer-address
-					h2.tt-u.footer-title Our location 
-					p Address: Input clients address here! 
-					p Email: contact@doubleu.vn
-				.footer-logo
-					img.lazyload.blur-up(data-src="./images/logo.svg")
-			.col-lg-1
-			.col-lg-5
-				form.footer-form#footer-form
-					h2.tt-u.footer-title Get in touch
-					.form-group
-						label.form-group__label(for="fullname") Họ và tên
-						input.form-control#fullname(type="text" name="Fullname")
-						//- .form-group__message
-						//- 	span.far.fa-exclamation-circle
-						//- 	span Error nè
-					.form-group
-						label.form-group__label(for="phone") Số điện thoại
-						input.form-control#phone(type="text" name="Phone")
-						//- .form-group__message
-						//- 	span.far.fa-exclamation-circle
-						//- 	span Error nè
-					.form-group
-						label.form-group__label(for="email") Họ và tên
-						input.form-control#email(type="text" name="Email")
-						//- .form-group__message
-						//- 	span.far.fa-exclamation-circle
-						//- 	span Error nè
-					.form-group
-						label.form-group__label(for="fullname") Họ và tên
-						input.form-control#fullname(type="text" name="Fullname")
-						.form-group__message
-							span.far.fa-exclamation-circle
-							span Error nè
-					.form-group.ta-r
-						button.btn.btn__white 
-							span Submit
-							span.far.fa-paper-plane
+			.col-xl-11
+				hr
+				.row.jc-sb
+					.col-md-auto
+						.footer-logo
+							img.lazyload.blur-up(data-src="./images/logo.svg")
+					.col-md
+						.row.jc-fe
+							.col.col-md-auto.footer-nav
+								h3 Quick links
+								ul
+									li
+										a(href="/") Home
+									li
+										a(href="what-we-do.html") What we do
+									li
+										a(href="our-works.html") Our works
+									li
+										a(href="contact.html") Contact us
+							.col-1
+							.col.col-md-auto.footer-nav
+								h3 Socials
+								ul
+									li
+										a(href="facebook.com") 
+											span.fab.fa-facebook-f
+											span Facebok
+									li
+										a(href="instagram.com") 
+											span.fab.fa-instagram
+											span Instagram

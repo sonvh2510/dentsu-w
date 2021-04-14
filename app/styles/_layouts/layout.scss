@@ -19,8 +19,7 @@ html {
 }
 
 body {
-	background-color: #f7f9fe;
-	color: #333333;
+	color: map-get($color, text);
 }
 
 main {
@@ -39,6 +38,7 @@ main {
 		margin-top: 67px;
 	}
 }
+
 .backdrop {
 	position: fixed;
 	width: 100%;
@@ -54,13 +54,6 @@ main {
 	&.is-actived {
 		opacity: 1;
 		visibility: visible;
-	}
-}
-
-.page-section {
-	display: flex;
-	@media (min-width: 1025px) {
-		min-height: calc(100vh - 80px);
 	}
 }
 

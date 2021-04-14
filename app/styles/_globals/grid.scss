@@ -27,7 +27,7 @@
 
 @media (min-width: 1200px) {
 	.container {
-		max-width: 1140px;
+		max-width: 1160px;
 	}
 }
 
@@ -37,11 +37,11 @@
 	}
 }
 
-@media (min-width: 1600px) {
-	.container {
-		max-width: 1460px;
-	}
-}
+// @media (min-width: 1600px) {
+// 	.container {
+// 		max-width: 1460px;
+// 	}
+// }
 
 .row {
 	display: -ms-flexbox;

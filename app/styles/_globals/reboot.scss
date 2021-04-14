@@ -38,7 +38,7 @@ body {
 	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 1.5;
-	color: map-get($color, black);
+	color: map-get($color, text);
 	background-color: #fff;
 }
 
@@ -180,6 +180,7 @@ figure {
 img {
 	vertical-align: middle;
 	border-style: none;
+	max-width: 100%;
 }
 
 svg {
