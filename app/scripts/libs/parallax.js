@@ -2,14 +2,12 @@ export class Parallax {
 	constructor(selector, options = {}) {
 		this.selector = selector;
 		this.options = { ...options };
-		try {
+		if (document.querySelector(selector)) {
 			this.dom = document.querySelector(selector);
 			this.target = document.querySelector(this.options.target);
 			this.documentHeight = document.body.clientHeight;
 			// Initialize
 			this.init();
-		} catch (err) {
-			throw err;
 		}
 	}
 	scrollHandler() {

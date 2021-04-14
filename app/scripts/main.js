@@ -32,100 +32,6 @@ const toggleHeader = () => {
 	});
 };
 
-const headerSiteMenuScrollbar = () => {
-	const headerSiteMenu = document.querySelector('.header__siteMenu__wrapper');
-	if (!headerSiteMenu) {
-		return;
-	}
-	return new PerfectScrollbar(headerSiteMenu, {
-		wheelSpeed: 1,
-		wheelPropagation: true,
-		minScrollbarLength: 120,
-		swipeEasing: true,
-	});
-};
-
-const highlightProjectsSlider = () => {
-	return new Swiper('.highlight-projects-bottom .swiper-container', {
-		slidesPerView: 2,
-		loop: true,
-		centeredSlides: true,
-		effect: 'coverflow',
-		spaceBetween: 10,
-		coverflowEffect: {
-			rotate: 50,
-			stretch: 0,
-			depth: 100,
-			modifier: 1,
-			slideShadows: true,
-		},
-		pagination: {
-			el: '.highlight-projects-bottom .swiper-pagination',
-			clickable: true,
-		},
-		breakpoints: {
-			768: {
-				spaceBetween: 25,
-			},
-			1025: {
-				slidesPerView: 3,
-			},
-			1200: {
-				spaceBetween: 40,
-				slidesPerView: 3,
-			},
-		},
-	});
-};
-
-const projectMasonry = () => {
-	var galleryGrid = $('.js-mansonry');
-	galleryGrid.imagesLoaded(function () {
-		galleryGrid.isotope({
-			itemSelector: '.grid-item',
-			percentPosition: true,
-		});
-	});
-	galleryGrid.imagesLoaded().progress(function () {
-		galleryGrid.isotope();
-	});
-
-	const filterWrapper = $('.filter-wrapper');
-	const filterItemLinks = filterWrapper.find('.filter-item .filter-link');
-	filterItemLinks.each(function (index) {
-		const _this = $(this);
-		_this.on('click', function (e) {
-			e.preventDefault();
-			_this.addClass('active');
-			filterWrapper
-				.find('.filter-item .filter-link')
-				.not(_this)
-				.removeClass('active');
-			const url = _this.attr('href');
-			$.ajax({
-				url,
-				success: function (res) {
-					const $oldItems = galleryGrid.find('.grid-item');
-					const $items = $(res).find('.grid-item');
-					galleryGrid.isotope('remove', $oldItems);
-					galleryGrid.append($items).isotope('appended', $items);
-					galleryGrid.imagesLoaded().progress(function () {
-						galleryGrid.isotope();
-					});
-				},
-			});
-		});
-	});
-};
-
-const scrollToForm = () => {
-	$('.header__contact a').on('click', function (e) {
-		e.preventDefault();
-		const pos = $('#footer-form').offset().top - header.clientHeight;
-		$('html,body').animate({ scrollTop: pos }, 1200, 'swing');
-	});
-};
-
 document.addEventListener('DOMContentLoaded', () => {
 	new MoveElement('.header__nav', {
 		mobile: {
@@ -137,21 +43,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			method: 'insertAfter',
 		},
 	});
+
 	// Parallax
-	const p = new Parallax('.parallax', {
+	new Parallax('.parallax', {
 		target: '.parllax__img',
 		ratio: 3,
 		mobile: false,
 		breakpoint: 1025,
 	});
 
-	headerSiteMenuScrollbar();
+	// headerSiteMenuScrollbar();
 	toggleHeader();
-
-	scrollToForm();
-
-	highlightProjectsSlider();
-	projectMasonry();
 
 	var wow = new WOW({
 		boxClass: 'wow', // animated element css class (default is wow)

@@ -10,8 +10,6 @@ header {
 }
 .header__wrapper {
 	padding: 25px 40px;
-	display: flex;
-	align-items: center;
 	box-shadow: 0px 0px 12px rgba(map-get($color, black), 0.2);
 	@media (max-width: 1199.98px) {
 		padding: 20px 25px;
@@ -26,7 +24,7 @@ header {
 	}
 }
 .header__contact {
-	.btn__primary {
+	.btn--primary {
 		border-radius: 30px;
 		text-decoration: none;
 		font-weight: 700;
@@ -55,7 +53,7 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	.btn__toggle {
+	.btn--toggle {
 		height: 30px;
 		cursor: pointer;
 		display: flex;
