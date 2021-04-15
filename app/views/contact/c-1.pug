@@ -2,22 +2,25 @@ section.page-section.pd-70.contact-1
 	.container
 		.row.jc-c 
 			.col-xl-11 
+				h2.section-title.tt-u.underline.fadeInUp.wow(data-wow-delay="0s") Contact Us
 				.row
 					.col-md-6
-						h2.section-title.tt-u.underline.fadeInUp.wow(data-wow-delay="0s") Missions - Visions
 						form(action method)
+							.form-group
+								label.form-group__label Hotline
+								a(href="tel:0906999258") 0906999258
 							.form-group 
 								label.form-group__label Your email address
 								input.form-control(type="text" name="Email" placeholder="example@website.com")
-								p.form-group__message 
-									span.far.fa-exclamation-circle 
-									| Error nè má
+								//- p.form-group__message 
+								//- 	span.far.fa-exclamation-circle 
+								//- 	| Error nè má
 							.form-group 
 								label.form-group__label Subject
 								input.form-control(type="text" name="Subject" placeholder="Message's subject")
-								p.form-group__message 
-									span.far.fa-exclamation-circle 
-									| Error nè má
+								//- p.form-group__message 
+								//- 	span.far.fa-exclamation-circle 
+								//- 	| Error nè má
 							.form-group 
 								label.form-group__label Message
 								textarea.form-control.form-control--textarea(type="text" name="Message" placeholder="Your message starts with…")

@@ -47,9 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Parallax
 	new Parallax('.parallax', {
 		target: '.parllax__img',
-		ratio: 3,
+		ratio: 5,
 		mobile: false,
 		breakpoint: 1025,
+		offset: 150,
 	});
 
 	// headerSiteMenuScrollbar();

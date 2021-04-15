@@ -1,49 +1,14 @@
-section.page-section.pd-70.what-we-do-1
-	.container 
-		h2.section-title.underline.underline-center.ta-c.tt-u.fadeInUp.wow(data-wow-delay="0s") Highlights Projects
-		.row.highlight-projects-top
-			.col-lg-3.col-6
-				.highlight-project.fadeInUp.wow(data-wow-delay="0.85s")
-					a(href="" target="_blank")
-						.block-img
-							img.lazyload.blur-up(data-src="./images/projects/di_ve_nha.jpg") 
-			.col-lg-3.col-6
-				.highlight-project.fadeInUp.wow(data-wow-delay="0.45s")
-					a(href="" target="_blank")
-						.block-img
-							img.lazyload.blur-up(data-src="./images/projects/em_la_chau_bau.jpg") 
-			.col-lg-3.col-6
-				.highlight-project.fadeInUp.wow(data-wow-delay="0.65s")
-					a(href="" target="_blank")
-						.block-img
-							img.lazyload.blur-up(data-src="./images/projects/em_be.jpg") 
-			.col-lg-3.col-6
-				.highlight-project.fadeInUp.wow(data-wow-delay="0.25s")
-					a(href="" target="_blank")
-						.block-img
-							img.lazyload.blur-up(data-src="./images/projects/dan_ong_khong_noi.jpg") 
-		.row.highlight-projects-bottom
-			.col-12
-				.swiper-container 
-					.swiper-wrapper
-						.swiper-slide
-							.highlight-project
-								a(href="" target="_blank")
-									.block-img
-										img(src="./images/projects/di_ve_nha.jpg") 
-						.swiper-slide
-							.highlight-project
-								a(href="" target="_blank")
-									.block-img
-										img(src="./images/projects/em_la_chau_bau.jpg") 
-						.swiper-slide
-							.highlight-project
-								a(href="" target="_blank")
-									.block-img
-										img(src="./images/projects/em_be.jpg") 
-						.swiper-slide
-							.highlight-project
-								a(href="" target="_blank")
-									.block-img
-										img(src="./images/projects/dan_ong_khong_noi.jpg") 
-					.swiper-pagination
+section.page-section.pd-70.what-we-do.what-we-do-1
+	.container
+		.block-title
+			h2.section-title.big-title.tt-u Our  
+				br
+				| Celebraties
+			p W M&E manages celebrities’s commercial works.
+		.grid-container
+			-for(let i = 58; i <= 72; i++)
+				a.item(href="#")
+					.img 
+						img.lazyload.blur-up(data-src="/images/celebs/img_"+i+".png")
+					.text
+						p Tên Celeb

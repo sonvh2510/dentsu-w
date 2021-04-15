@@ -12,10 +12,14 @@ export class Parallax {
 	}
 	scrollHandler() {
 		const scrolled = window.scrollY;
-		this.target.setAttribute(
-			'style',
-			`transform: translateY(${scrolled / 3}px)`,
-		);
+		const { ratio, offset } = this.options;
+		this.target.style.backgroundPosition = `center ${
+			offset + -scrolled / ratio
+		}px`;
+		// this.target.setAttribute(
+		// 	'style',
+		// 	`background-position: center ${-scrolled / 3}px`,
+		// );
 	}
 	run() {
 		window.addEventListener('scroll', () => this.scrollHandler());

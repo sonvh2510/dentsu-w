@@ -7,15 +7,6 @@
 	[class*='col'] {
 		position: static;
 	}
-	.parllax__img {
-		width: 100%;
-		height: 100%;
-		background-size: 110%;
-		background-position: center 100px;
-		@media (min-width: 1025px) {
-			background-image: url('/images/bg-1.svg');
-		}
-	}
 	.index-1__banner,
 	.index-1__container {
 		z-index: 2;
