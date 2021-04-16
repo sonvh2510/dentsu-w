@@ -2,7 +2,8 @@ section.page-section.pd-70.contact-1
 	.container
 		.row.jc-c 
 			.col-xl-11 
-				h2.section-title.tt-u.underline.fadeInUp.wow(data-wow-delay="0s") Contact Us
+				.block-title
+					h2.section-title.sub-title(data-wow-delay="0s") Contact Us
 				.row
 					.col-md-6
 						form(action method)
@@ -24,9 +25,7 @@ section.page-section.pd-70.contact-1
 							.form-group 
 								label.form-group__label Message
 								textarea.form-control.form-control--textarea(type="text" name="Message" placeholder="Your message starts with…")
-								p.form-group__message 
-									span.far.fa-exclamation-circle 
-									| Error nè má
+								<span class="wpcf7-not-valid-tip" aria-hidden="true">The field is required.</span>
 							.form-group
 								button.btn.btn--primary.btn--submit
 									span Submit
