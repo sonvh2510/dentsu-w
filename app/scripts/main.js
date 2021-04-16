@@ -1,4 +1,5 @@
 import PerfectScrollbar from 'perfect-scrollbar';
+import Swiper from 'swiper';
 import MoveElement from './libs/move';
 import { Parallax } from './libs/parallax';
 
@@ -51,6 +52,32 @@ document.addEventListener('DOMContentLoaded', () => {
 		mobile: false,
 		breakpoint: 1025,
 		offset: 150,
+	});
+
+	new Swiper('.what-we-do-2 .swiper-container', {
+		centeredSlides: true,
+		loop: true,
+		speed: 1000,
+		slidesPerView: 1.5,
+		spaceBetween: -20,
+		breakpoints: {
+			1440: {
+				slidesPerView: 2.7,
+				spaceBetween: -50,
+			},
+			1200: {
+				slidesPerView: 2.7,
+				spaceBetween: -40,
+			},
+			1025: {
+				slidesPerView: 2.7,
+				spaceBetween: -30,
+			},
+			768: {
+				slidesPerView: 2.7,
+				spaceBetween: -20,
+			},
+		},
 	});
 
 	// headerSiteMenuScrollbar();
