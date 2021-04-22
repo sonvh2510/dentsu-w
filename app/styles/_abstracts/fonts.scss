@@ -1,4 +1,236 @@
 @font-face {
+	font-family: 'Big Shoulders Display';
+	src: local('Big Shoulders Display Black'), local('BigShouldersDisplay-Black'),
+			url('../fonts/BigShouldersDisplay-Black.woff2') format('woff2'),
+			url('../fonts/BigShouldersDisplay-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Big Shoulders Display';
+	src: local('Big Shoulders Display ExtraBold'), local('BigShouldersDisplay-ExtraBold'),
+			url('../fonts/BigShouldersDisplay-ExtraBold.woff2') format('woff2'),
+			url('../fonts/BigShouldersDisplay-ExtraBold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Big Shoulders Display';
+	src: local('Big Shoulders Display Bold'), local('BigShouldersDisplay-Bold'),
+			url('../fonts/BigShouldersDisplay-Bold.woff2') format('woff2'),
+			url('../fonts/BigShouldersDisplay-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Big Shoulders Display';
+	src: local('Big Shoulders Display Medium'), local('BigShouldersDisplay-Medium'),
+			url('../fonts/BigShouldersDisplay-Medium.woff2') format('woff2'),
+			url('../fonts/BigShouldersDisplay-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Big Shoulders Display';
+	src: local('Big Shoulders Display Light'), local('BigShouldersDisplay-Light'),
+			url('../fonts/BigShouldersDisplay-Light.woff2') format('woff2'),
+			url('../fonts/BigShouldersDisplay-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Big Shoulders Display';
+	src: local('Big Shoulders Display Regular'), local('BigShouldersDisplay-Regular'),
+			url('../fonts/BigShouldersDisplay-Regular.woff2') format('woff2'),
+			url('../fonts/BigShouldersDisplay-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Big Shoulders Display';
+	src: local('Big Shoulders Display SemiBold'), local('BigShouldersDisplay-SemiBold'),
+			url('../fonts/BigShouldersDisplay-SemiBold.woff2') format('woff2'),
+			url('../fonts/BigShouldersDisplay-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Big Shoulders Display';
+	src: local('Big Shoulders Display Thin'), local('BigShouldersDisplay-Thin'),
+			url('../fonts/BigShouldersDisplay-Thin.woff2') format('woff2'),
+			url('../fonts/BigShouldersDisplay-Thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Circular Std';
+	src: local('Circular Std Black'), local('CircularStd-Black'),
+			url('../fonts/CircularStd-Black.woff2') format('woff2'),
+			url('../fonts/CircularStd-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Circular Std';
+	src: local('Circular Std Black Italic'), local('CircularStd-BlackItalic'),
+			url('../fonts/CircularStd-BlackItalic.woff2') format('woff2'),
+			url('../fonts/CircularStd-BlackItalic.woff') format('woff');
+	font-weight: 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Circular Std';
+	src: local('Circular Std Bold Italic'), local('CircularStd-BoldItalic'),
+			url('../fonts/CircularStd-BoldItalic.woff2') format('woff2'),
+			url('../fonts/CircularStd-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Circular Std';
+	src: local('Circular Std Bold'), local('CircularStd-Bold'),
+			url('../fonts/CircularStd-Bold.woff2') format('woff2'),
+			url('../fonts/CircularStd-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Circular Std Book';
+	src: local('Circular Std Book'), local('CircularStd-Book'),
+			url('../fonts/CircularStd-Book.woff2') format('woff2'),
+			url('../fonts/CircularStd-Book.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Circular Std Book';
+	src: local('Circular Std Book Italic'), local('CircularStd-BookItalic'),
+			url('../fonts/CircularStd-BookItalic.woff2') format('woff2'),
+			url('../fonts/CircularStd-BookItalic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Circular Std';
+	src: local('Circular Std Medium'), local('CircularStd-Medium'),
+			url('../fonts/CircularStd-Medium.woff2') format('woff2'),
+			url('../fonts/CircularStd-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Circular Std';
+	src: local('Circular Std Medium Italic'), local('CircularStd-MediumItalic'),
+			url('../fonts/CircularStd-MediumItalic.woff2') format('woff2'),
+			url('../fonts/CircularStd-MediumItalic.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Darker Grotesque';
+	src: local('Darker Grotesque Black'), local('DarkerGrotesque-Black'),
+			url('../fonts/DarkerGrotesque-Black.woff2') format('woff2'),
+			url('../fonts/DarkerGrotesque-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Darker Grotesque';
+	src: local('Darker Grotesque Bold'), local('DarkerGrotesque-Bold'),
+			url('../fonts/DarkerGrotesque-Bold.woff2') format('woff2'),
+			url('../fonts/DarkerGrotesque-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Darker Grotesque';
+	src: local('Darker Grotesque ExtraBold'), local('DarkerGrotesque-ExtraBold'),
+			url('../fonts/DarkerGrotesque-ExtraBold.woff2') format('woff2'),
+			url('../fonts/DarkerGrotesque-ExtraBold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Darker Grotesque';
+	src: local('Darker Grotesque Light'), local('DarkerGrotesque-Light'),
+			url('../fonts/DarkerGrotesque-Light.woff2') format('woff2'),
+			url('../fonts/DarkerGrotesque-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Darker Grotesque';
+	src: local('Darker Grotesque Medium'), local('DarkerGrotesque-Medium'),
+			url('../fonts/DarkerGrotesque-Medium.woff2') format('woff2'),
+			url('../fonts/DarkerGrotesque-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Darker Grotesque';
+	src: local('Darker Grotesque Regular'), local('DarkerGrotesque-Regular'),
+			url('../fonts/DarkerGrotesque-Regular.woff2') format('woff2'),
+			url('../fonts/DarkerGrotesque-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Darker Grotesque';
+	src: local('Darker Grotesque SemiBold'), local('DarkerGrotesque-SemiBold'),
+			url('../fonts/DarkerGrotesque-SemiBold.woff2') format('woff2'),
+			url('../fonts/DarkerGrotesque-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+
+@font-face {
 	font-family: 'Drotesk No5';
 	src: local('Drotesk No5 Medium'), local('DroteskNo5-Medium'),
 		url('../fonts/DroteskNo5-Medium.woff2') format('woff2');

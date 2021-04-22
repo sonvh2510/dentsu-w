@@ -84,18 +84,25 @@ main {
 
 .block-title {
 	margin-bottom: 45px;
+	.big-title + .sub-title {
+		margin-top: 4.5rem;
+	}
+	.sub-title + .section-sub-title {
+		margin-top: 3.5rem;
+	}
 }
 
 .section-title {
 	font-size: 3.2rem;
-	font-weight: 600;
+	font-weight: 900;
 	line-height: 1.2;
+	font-family: 'Big Shoulders Display', sans-serif;
 	&.big-title {
 		font-size: calc(3rem + (4000vw / 1920));
 	}
 	&.sub-title {
 		font-weight: 500;
-		font-size: calc(2rem + (2000vw / 1920));
+		font-size: calc(2rem + (3000vw / 1920));
 		text-transform: uppercase;
 	}
 	@media (max-width: 1199.98px) {
