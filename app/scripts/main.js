@@ -83,6 +83,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	// headerSiteMenuScrollbar();
 	toggleHeader();
 
+	// Call fancybox
+	// $('[data-fancybox]').fancybox({
+	// 	touch: false,
+	// });
+	$('[data-fancybox]').on('click', function (e) {
+		e.preventDefault();
+		const content = $(this).find('.celeb-dialog');
+		$.fancybox.open(content);
+	});
+
 	var wow = new WOW({
 		boxClass: 'wow', // animated element css class (default is wow)
 		animateClass: 'animated', // animation css class (default is animated)

@@ -3,12 +3,23 @@ section.page-section.pd-70.what-we-do.what-we-do-1
 		.block-title
 			h2.section-title.big-title.tt-u Our  
 				br
-				| Celebraties
+				| Celebrities
 			p.section-description W M&E manages celebrities’s commercial works.
 		.grid-container
-			-for(let i = 58; i <= 72; i++)
-				a.item(href="#")
+			-for(let i = 1; i <= 18; i++)
+				a.item(href="#" data-fancybox)
 					.img 
-						img.lazyload.blur-up(data-src="/images/celebs/img_"+i+".png")
-					.text
-						p Tên Celeb
+						img.lazyload.blur-up(data-src="/images/celebs/celeb_"+i+".jpg")
+					.d-none
+						.celeb-dialog
+							.celeb-dialog-wrapper
+								.dialog-img
+									.img-wrapper
+										img.lazyload.blur-up(data-src="/images/celebs/celeb_"+i+".jpg")
+								.dialog-content
+									h4 Tên Celeb
+									p Ngày sinh: 30 tháng 9, 1989 (31 tuổi)
+									p Nơi sinh: Thành phố Hạ Long
+									p Chiều cao: 1,68 m
+									br
+									p Bùi Thị Bích Phương, hay còn được biết tới bằng nghệ danh Bích Phương, là nữ ca sĩ và giám khảo chương trình truyền hình người Việt Nam.
