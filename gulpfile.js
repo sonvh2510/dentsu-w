@@ -14,7 +14,7 @@ task('cssCore', (cb) => cssCore());
 task('jsTask', (cb) => jsTask());
 task('cssTask', (cb) => cssTask());
 task('renderAll', (cb) => renderFiles('./app/**.pug'));
-task('serve', (cb) => serve());
+task('serve', serve);
 
 exports.dev = series(
 	'cleanDist',
