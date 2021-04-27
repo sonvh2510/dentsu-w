@@ -39,16 +39,21 @@
 			.img {
 				width: 100%;
 				height: 100%;
+				transition: all .4s cubic-bezier(0.19, 1, 0.22, 1);
 				img {
 					object-fit: cover;
+					transition: all .4s cubic-bezier(0.19, 1, 0.22, 1);
 					width: 100%;
 					height: 100%;
 				}
 			}
 			@media (min-width: 1025px) {
 				&:hover {
-					.text {
-						opacity: 1;
+					.img {
+						background-color: black;
+						img {
+							opacity: 0.5;
+						}
 					}
 				}
 			}
