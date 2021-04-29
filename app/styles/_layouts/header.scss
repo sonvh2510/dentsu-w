@@ -170,9 +170,14 @@ header {
 		padding-right: 45px;
 		&.current-menu-item {
 			a {
-				color: map-get($color, main);
-				font-weight: 500;
-				border-bottom: 1px solid map-get($color, main);
+				@media (min-width: 1025px) {
+					color: map-get($color, main);
+					font-weight: 500;
+					border-bottom: 1px solid map-get($color, main);
+				}
+				@media (max-width: 1024.98px) {
+					border-bottom: 1px solid map-get($color, black);
+				}
 			}
 		}
 	}
