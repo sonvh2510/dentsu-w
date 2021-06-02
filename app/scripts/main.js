@@ -11,7 +11,7 @@ const backdrop = document.querySelector('.backdrop');
 const headerToggle = document.querySelector('.js-header__toggle');
 const headerClose = document.querySelector('.js-header__close');
 const wrapper = document.querySelector('.header__siteMenu--hidden');
-
+let headerHeight = $('header').innerHeight();
 const toggleHeader = () => {
 	if (!headerToggle) {
 		return;
@@ -32,6 +32,10 @@ const toggleHeader = () => {
 		backdrop.classList.remove('is-actived');
 	});
 };
+
+$(window).on('resize', function(e) {
+	headerHeight =$('header').innerHeight();
+})
 
 document.addEventListener('DOMContentLoaded', () => {
 	new MoveElement('.header__nav', {
@@ -78,6 +82,17 @@ document.addEventListener('DOMContentLoaded', () => {
 				spaceBetween: -20,
 			},
 		},
+	});
+
+	$('#scroll-to-service').on('click', function (e) {
+		e.preventDefault();
+		const position = $('#our-services').offset().top;
+		$('html,body').animate(
+			{
+				scrollTop: position - headerHeight,
+			},
+			1000,
+		);
 	});
 
 	// headerSiteMenuScrollbar();
