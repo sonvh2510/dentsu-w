@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	const scrollFn = () => {
-		const position = $('#our-services').offset().top;
+		const position = $('#what-we-do').offset().top;
 		$('html,body').animate(
 			{
 				scrollTop: position - headerHeight,
@@ -97,9 +97,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		scrollFn();
 	}
 
-	$('#link-service').on('click', function (e) {
+	$('[href="#what-we-do"]').on('click', function (e) {
 		e.preventDefault();
-		if ($('#our-services').length > 0) {
+		if ($('#what-we-do').length > 0) {
 			scrollFn();
 		} else {
 			localStorage.setItem('scrollToService', true);
