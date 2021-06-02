@@ -1,12 +1,9 @@
-import PerfectScrollbar from 'perfect-scrollbar';
 import Swiper from 'swiper';
 import MoveElement from './libs/move';
 import { Parallax } from './libs/parallax';
 
 // Define variables
-const body = document.body;
 const main = document.querySelector('main');
-const header = document.querySelector('header');
 const backdrop = document.querySelector('.backdrop');
 const headerToggle = document.querySelector('.js-header__toggle');
 const headerClose = document.querySelector('.js-header__close');
@@ -33,9 +30,9 @@ const toggleHeader = () => {
 	});
 };
 
-$(window).on('resize', function(e) {
-	headerHeight =$('header').innerHeight();
-})
+$(window).on('resize', function (e) {
+	headerHeight = $('header').innerHeight();
+});
 
 document.addEventListener('DOMContentLoaded', () => {
 	new MoveElement('.header__nav', {
@@ -84,8 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	});
 
-	$('#scroll-to-service').on('click', function (e) {
-		e.preventDefault();
+	const scrollFn = () => {
 		const position = $('#our-services').offset().top;
 		$('html,body').animate(
 			{
@@ -93,6 +89,23 @@ document.addEventListener('DOMContentLoaded', () => {
 			},
 			1000,
 		);
+		localStorage.removeItem('scrollToService');
+	};
+
+	const checkLocalStorage = Boolean(localStorage.getItem('scrollToService'));
+	if (checkLocalStorage) {
+		scrollFn();
+	}
+
+	$('#link-service').on('click', function (e) {
+		e.preventDefault();
+		if ($('#our-services').length > 0) {
+			scrollFn();
+		} else {
+			localStorage.setItem('scrollToService', true);
+			const url = `${window.location.origin}`;
+			window.location.href = url;
+		}
 	});
 
 	// headerSiteMenuScrollbar();
